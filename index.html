@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="client.js"></script>
+		<script type="text/javascript" src="cloud.js"></script>
+		<script type="text/javascript" src="message.js"></script>
+		<title>ADD CLIENT</title>
+	</head>
+	
+	<body>
+
+	<h1>RETO 2 CICLO 3 MINTIC</h1>
+
+	<!--- Sección Cliente  -->
+	<div>
+		<frame frameborder=1>
+			<form id="form_Cloud">
+				<h2>ADD CLOUD</h2>
+		
+				<ul>
+
+					<li>
+						<label for="id_Cloud">Id</label>
+						<input id="id_Cloud" type="number">
+					</li>
+					<li>
+						<label for="brand_Cloud">Brand</label>
+						<input id="brand_Cloud" type="text">
+					</li>
+					<li>
+						<label for="model_Cloud">Model</label>
+						<input id="model_Cloud" type="number">
+					</li>
+					<li>
+						<label for="category_id_Cloud">Category Id</label>
+						<input id="category_id_Cloud" type="number">
+					</li>
+					<li>
+						<label for="name_Cloud">Name</label>
+						<input id="name_Cloud" type="text">
+					</li>
+					<li>
+						<button onclick="cloud.findAll()" type="button">Actualizar</button>
+					</li>
+					<li>
+						<button onclick="cloud.insert()" type="button">Save</button>
+					</li>
+					<li>
+						<button onclick="cloud.update()" type="button">Update</button>
+					</li>
+					<li>
+						<button onclick="cloud.deleteById()" type="button">Delete</button>
+					</li>
+				</ul>
+			
+			</form>
+			<table id="table_Cloud">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Brand</th>
+						<th>Model</th>
+						<th>Category Id</th>
+						<th>Name</th>
+
+					</tr>
+				</thead>
+				<tbody id="tbody_Cloud">
+					<tr>
+						<td>No Clouds</td>
+					</tr>
+				</tbody>
+			</table>
+		</frame>
+	</div>
+
+
+
+	<!--- Sección Cliente  -->
+	<div>
+		<frame frameborder=1>
+			<form>
+				<h2>ADD CLIENT</h2>
+		
+				<ul>
+
+					<li>
+						<label for="id_Client">Id</label>
+						<input id="id_Client" type="number">
+					</li>
+					<li>
+						<label for="name_Client">Name</label>
+						<input id="name_Client" type="text">
+					</li>
+					<li>
+						<label for="email_Client">Email</label>
+						<input id="email_Client"type="text">
+					</li>
+					<li>
+						<label for="age_Client">Age</label>
+						<input id="age_Client" min="1" type="number">
+					</li>
+					<li>
+						<button onclick="client.findAll()" type="button">Actualizar</button>
+					</li>
+					<li>
+						<button onclick="client.insert()" type="button">Save</button>
+					</li>
+					<li>
+						<button onclick="client.update()" type="button">Update</button>
+					</li>
+					<li>
+						<button onclick="client.deleteById()" type="button">Delete</button>
+					</li>
+				</ul>
+			
+			</form>
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Age</th>
+					</tr>
+				</thead>
+				<tbody id="tbody_Client">
+					<tr>
+						<td colspan="4">No Clients</td>
+					</tr>
+				</tbody2>
+			</table>
+		</frame>
+	</div>
+
+
+	<!--- Sección Mensaje  -->
+	<div>
+		<frame frameborder=1>
+			<form>
+				<h2>ADD MESSAGE</h2>
+		
+				<ul>
+
+					<li>
+						<label for="id_Message">Id</label>
+						<input id="id_Message" type="number">
+					</li>
+					<li>
+						<label for="messagetext">Message</label>
+						<input id="messagetext" type="text">
+					</li>
+					<li>
+						<button onclick="message.findAll()" type="button">Actualizar</button>
+					</li>
+					<li>
+						<button onclick="message.insert()" type="button">Save</button>
+					</li>
+					<li>
+						<button onclick="message.update()" type="button">Update</button>
+					</li>
+					<li>
+						<button onclick="message.deleteById()" type="button">Delete</button>
+					</li>
+				</ul>
+			
+			</form>
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Message</th>
+					</tr>
+				</thead>
+				<tbody id="tbody_Message">
+					<tr>
+						<td colspan="4">No Clients</td>
+					</tr>
+				</tbody>
+			</table>
+		</frame>
+	</div>
+
+
+	</body>
+</html>

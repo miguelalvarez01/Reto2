@@ -1,0 +1,35 @@
+-- GET ----
+
+SELECT * FROM CLIENT
+--------------------------------------------------------------------
+
+--- POST  ----
+
+BEGIN
+    INSERT INTO CLIENT(ID, NAME, EMAIL, AGE)
+    VALUES(:id, :name, :email, :age);
+    :status_code:=201;
+END;
+
+-----------------------------------------------------------------------
+--- PUT  ------
+
+BEGIN
+    UPDATE CLIENT
+    SET
+    NAME = :name,
+    EMAIL = :email,
+    AGE = :age
+    WHERE ID = :id;
+    :status_code :=201;
+END;
+
+---------------------------------------------------------------------
+
+--DELETE----
+
+BEGIN
+    DELETE FROM CLIENT
+    WHERE ID = :id;
+    :status_code := 204;
+END;
